@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jose Rizal: Life and Works</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #34495e;
+        }
+        nav a {
+            color: white;
+            padding: 1rem;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        nav a:hover {
+            background: #2c3e50;
+        }
+        .container {
+            padding: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .section {
+            background: white;
+            margin: 1rem;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            flex: 1 1 300px;
+            max-width: 600px;
+        }
+        .section h2 {
+            color: #2c3e50;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .interactive {
+            text-align: center;
+            margin-top: 1rem;
+        }
+        button {
+            background-color: #2980b9;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background-color: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>The Life and Works of Dr. Jose Rizal</h1>
+        <p>National Hero of the Philippines</p>
+    </header>
+
+    <nav>
+        <a href="#bio">Biography</a>
+        <a href="#works">Works</a>
+        <a href="#legacy">Legacy</a>
+        <a href="#interactive">Interactive</a>
+    </nav>
+
+    <div class="container">
+        <div id="bio" class="section">
+            <h2>Biography</h2>
+            <p>Jose Rizal was born on June 19, 1861, in Calamba, Laguna. He was a polymath, nationalist, and writer whose works inspired the Philippine revolution. He traveled extensively to study and spread his ideas.</p>
+        </div>
+
+        <div id="works" class="section">
+            <h2>Notable Works</h2>
+            <ul>
+                <li><strong>Noli Me Tangere</strong> - A novel exposing the abuses of the Spanish clergy.</li>
+                <li><strong>El Filibusterismo</strong> - A sequel advocating political reform and justice.</li>
+                <li>Various poems, essays, and letters showcasing his patriotism and love for the Filipino people.</li>
+            </ul>
+        </div>
+
+        <div id="legacy" class="section">
+            <h2>Legacy</h2>
+            <p>Rizal's martyrdom on December 30, 1896, in Bagumbayan (now Rizal Park) cemented his place as a national hero. His ideals for freedom and independence continue to inspire generations of Filipinos.</p>
+        </div>
+
+        <div id="interactive" class="section interactive">
+            <h2>Interactive</h2>
+            <p>Test your knowledge about Jose Rizal's life and works!</p>
+            <button onclick="showQuiz()">Take the Quiz</button>
+            <div id="quiz" style="display:none; margin-top: 1rem;">
+                <p><strong>Question:</strong> What was the title of Rizal's first novel?</p>
+                <button onclick="checkAnswer(true)">Noli Me Tangere</button>
+                <button onclick="checkAnswer(false)">El Filibusterismo</button>
+                <p id="feedback" style="margin-top: 1rem; font-weight: bold;"></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 The Life and Works of Jose Rizal | Educational Project</p>
+    </footer>
+
+    <script>
+        function showQuiz() {
+            document.getElementById('quiz').style.display = 'block';
+        }
+        function checkAnswer(isCorrect) {
+            const feedback = document.getElementById('feedback');
+            if (isCorrect) {
+                feedback.textContent = "Correct! 'Noli Me Tangere' was Rizal's first novel.";
+                feedback.style.color = 'green';
+            } else {
+                feedback.textContent = "Incorrect. Try again!";
+                feedback.style.color = 'red';
+            }
+        }
+    </script>
+</body>
+</html>
